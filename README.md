@@ -103,7 +103,7 @@ Vedi [`docs/notes/prompt-ibrido-bologna.md`](docs/notes/prompt-ibrido-bologna.md
 
 | Layer | Tecnologia |
 |---|---|
-| Discovery & Metadati | [CKAN MCP Server](https://github.com/marcyborg/ckan-mcp-server) |
+| Discovery & Metadati | [CKAN MCP Server](https://github.com/ondata/ckan-mcp-server) |
 | Acquisizione dati | Python `requests` / `pandas` |
 | Analisi statistica | Python `pandas` 2.x |
 | Dashboard | HTML5 + [Chart.js](https://www.chartjs.org/) 4.4.0 via CDN |
@@ -124,5 +124,5 @@ I **dati** sono rilasciati sotto [Creative Commons Attribuzione 4.0 Internaziona
 
 ## Autore
 
-**Francesco Marchitelli** — [marchitelli.francesco@gmail.com](mailto:marchitelli.francesco@gmail.com)  
+**Ing. Francesco Marchitelli** — [https://www.francescomarchitelli.com](https://www.francescomarchitelli.com)  
 Short Master Generative AI — Università degli Studi di Bari Aldo Moro — a.a. 2025/2026

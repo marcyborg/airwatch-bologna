@@ -124,5 +124,5 @@ See [`docs/notes/hybrid-prompt-bologna.md`](docs/notes/hybrid-prompt-bologna.md)
 
 ## Author
 
-**Francesco Marchitelli** — [marchitelli.francesco@gmail.com](mailto:marchitelli.francesco@gmail.com)  
+**Francesco Marchitelli** — [https://www.francescomarchitelli.com](https://www.francescomarchitelli.com)  
 Short Master in Generative AI — University of Bari Aldo Moro — a.y. 2025/2026

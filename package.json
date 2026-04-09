@@ -1,0 +1,22 @@
+{
+  "name": "airwatch-bologna",
+  "version": "1.0.0",
+  "description": "A project for managing and documenting AirWatch Bologna.",
+  "main": "index.js",
+  "scripts": {
+    "link": "node scripts/link-generator.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/airwatch-bologna.git"
+  },
+  "keywords": [
+    "AirWatch",
+    "Bologna",
+    "documentation"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

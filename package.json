@@ -1,21 +1,30 @@
 {
   "name": "airwatch-bologna",
-  "version": "1.0.0",
-  "description": "A project for managing and documenting AirWatch Bologna.",
-  "main": "index.js",
+  "version": "1.1.0",
+  "description": "Pipeline analitica end-to-end per la qualità dell'aria urbana di Bologna — CKAN MCP Server + Python + Chart.js",
+  "main": "scripts/link-generator.js",
   "scripts": {
     "link": "node scripts/link-generator.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/airwatch-bologna.git"
+    "url": "https://github.com/marcyborg/airwatch-bologna.git"
   },
   "keywords": [
-    "AirWatch",
-    "Bologna",
-    "documentation"
+    "open-data",
+    "ckan",
+    "qualita-aria",
+    "bologna",
+    "arpae",
+    "pipeline",
+    "analisi-dati",
+    "dashboard",
+    "mcp-server",
+    "generative-ai",
+    "react-prompting",
+    "chain-of-thought"
   ],
-  "author": "Your Name",
+  "author": "Francesco Marchitelli <marchitelli.francesco@gmail.com>",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {}

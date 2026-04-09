@@ -10,7 +10,7 @@
 
 ## Executive Summary
 
-La pipeline AirWatch Bologna implementa un flusso end-to-end di acquisizione, trasformazione, analisi e visualizzazione dei dati sulla qualità dell'aria del Comune di Bologna, pubblicati su dati.gov.it[cite:37]. I dati, elaborati a partire dalle rilevazioni ARPAE Emilia-Romagna, coprono 3 centraline urbane (Via Chiarini, Giardini Margherita, Porta San Felice) e 8 inquinanti atmosferici[cite:37]. Su 91 giorni di copertura (31 dic 2025 → 31 mar 2026), la pipeline ha processato **19.661 righe** di misurazioni orarie, calcolato medie giornaliere, rilevato superamenti dei limiti EU, e prodotto una dashboard interattiva HTML/JS.
+La pipeline AirWatch Bologna implementa un flusso end-to-end di acquisizione, trasformazione, analisi e visualizzazione dei dati sulla qualità dell'aria del Comune di Bologna, pubblicati su dati.gov.it[cite:37]. I dati, elaborati a partire dalle rilevazioni ARPAE Emilia-Romagna, coprono 3 centraline urbane (Via Chiarini, Giardini Margherita, Porta San Felice) e 8 inquinanti atmosferici[cite:37]. Su 97 giorni di copertura (31 dic 2025 → 5 apr 2026), la pipeline ha processato **10.000 record** (campione rappresentativo) di misurazioni orarie, calcolato medie giornaliere, rilevato superamenti dei limiti EU, e prodotto una dashboard interattiva HTML/JS.
 
 ---
 
@@ -27,7 +27,7 @@ La pipeline AirWatch Bologna implementa un flusso end-to-end di acquisizione, tr
 | **Licenza** | CC BY 4.0 |
 | **Frequenza** | DAILY |
 | **Lingua** | ITA |
-| **Ultima modifica** | 2026-03-21 |
+| **Ultima modifica** | 2026-04-05 |
 
 
 ### 1.2 Formati disponibili
@@ -154,7 +154,7 @@ df['hour']          = df['reftime'].dt.hour
 df['stazione_short'] = df['stazione'].str.split(',').str[0].str.strip()
 ```
 
-**Output**: DataFrame con 19.661 righe, 8 colonne, 0 valori nulli.
+**Output**: DataFrame con 10.000 righe (campione), 8 colonne, 0 valori nulli.
 
 ### 3.3 Aggregazione Giornaliera
 
@@ -211,9 +211,9 @@ stats = (
 ### 4.1 Completezza
 
 ```
-Periodo:           31 dic 2025 → 31 mar 2026  (91 giorni)
-Possibili record:  91 giorni × 3 stazioni × 8 inquinanti = 2.184 combinazioni
-Record presenti:   ~1.268 combinazioni giornaliere
+Periodo:           31 dic 2025 → 5 apr 2026  (97 giorni)
+Possibili record:  97 giorni × 3 stazioni × 8 inquinanti = 2.328 combinazioni
+Record presenti:   ~1.350 combinazioni giornaliere (stima)
 Completezza:       ≈ 58%
 ```
 
@@ -247,25 +247,25 @@ La completezza al 58% indica gap significativi nel dataset, tipicamente dovuti a
 
 | Inquinante | Media (µg/m³) | Massimo | Minimo | Dev. Std | Valutazione |
 |---|---|---|---|---|---|
-| **PM10** | 28.3 | **73.0** | 0.0 | 14.6 | ⚠ Picchi critici |
-| **PM2.5** | 20.7 | 54.0 | 0.0 | 11.9 | ✓ Media ok |
-| **NO₂** | 24.7 | 56.8 | 5.6 | 8.7 | ✓ Sotto soglia annuale |
-| **NOX** | 58.1 | **149.6** | 16.8 | 27.3 | ⚠ Attenzione |
-| **O₃** | 27.2 | 83.9 | 3.6 | 14.8 | → Cresce a primavera |
-| **NO** | 17.2 | 68.0 | 2.9 | 13.3 | → Monitorare |
-| **CO** | 0.63 | 1.18 | 0.31 | 0.20 | ✓ Entro limiti |
-| **C₆H₆ Benzene** | 1.29 | 2.48 | 0.48 | 0.40 | ✓ Sotto soglia EU (5) |
+| **PM10** | 26.3 | **59.0** | 0.0 | — | ⚠ Picchi critici |
+| **PM2.5** | — | — | — | — | Dato parziale per stazione |
+| **NO₂** | 24.2 | **127.0** | 3.0 | — | ✓ Media sotto soglia annuale |
+| **NOX** | — | — | — | — | Non disponibile per tutte le stazioni |
+| **O₃** | 29.2 | **116.0** | — | — | → Forte crescita a primavera |
+| **NO** | — | — | — | — | → Monitorare |
+| **CO** | — | — | — | — | Solo centralina Via Chiarini |
+| **C₆H₆ Benzene** | — | — | — | — | Solo centralina Via Chiarini |
 
 ### 5.2 Trend mensile (tutte le stazioni aggregate)
 
-| Mese | PM10 | PM2.5 | NO₂ | O₃ |
-|---|---|---|---|---|
-| Dic 2025 | 36.3 | 28.5 | 19.7 | 13.0 |
-| Gen 2026 | 32.9 | 25.9 | 29.9 | 17.3 |
-| Feb 2026 | 25.2 | 17.4 | 24.6 | 25.8 |
-| Mar 2026 | 26.3 | 18.4 | 19.7 | **38.8** |
+| Mese | NO₂ | O₃ |
+|---|---|---|
+| Gen 2026 | 29.2 | 17.3 |
+| Feb 2026 | 24.7 | 27.8 |
+| Mar 2026 | 20.3 | 36.5 |
+| Apr 2026 | **17.0** | **56.0** |
 
-L'andamento è atteso: PM10 e NO₂ calano con l'avanzare della primavera (minor riscaldamento, piogge), mentre O₃ aumenta con l'irradiazione solare crescente.
+L'andamento è atteso: NO₂ cala con l'avanzare della primavera (da 29.2 µg/m³ in gennaio a 17.0 in aprile), mentre O₃ aumenta fortemente con l'irradiazione solare crescente (da 17.3 a 56.0 µg/m³). Il dataset storico disponibile su dati.gov.it consentirebbe un'analisi multi-anno per confermare la stagionalità.
 
 ---
 
@@ -339,11 +339,11 @@ Per un'analisi longitudinale, i dataset annuali del Comune di Milano (disponibil
 
 ## 9. Roadmap
 
-- **v1.1** — Integrazione automatica dataset storici per analisi trend multi-anno
-- **v1.2** — Aggiornamento automatico giornaliero via cron job o GitHub Actions
+- **v1.1** — Integrazione automatica dataset storici (dal 2017) per analisi trend multi-anno
+- **v1.2** — Aggiornamento automatico giornaliero via GitHub Actions + notifiche superamento soglie
 - **v1.3** — Aggiunta mappa Leaflet con marker geolocalizzati delle centraline
 - **v1.4** — Correlazione con dati meteo (temperatura, umidità, vento) tramite API OpenMeteo
-- **v2.0** — Deploy come web app con backend FastAPI + aggiornamento in tempo reale
+- **v2.0** — Deploy come web app con backend FastAPI + aggiornamento in tempo reale + benchmarking cross-città
 
 ---
 

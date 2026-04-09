@@ -1,0 +1,161 @@
+{
+  "total_records": 10000,
+  "date_range": {
+    "from": "2025-12-31",
+    "to": "2026-04-05"
+  },
+  "stations": [
+    "GIARDINI MARGHERITA",
+    "PORTA SAN FELICE",
+    "VIA CHIARINI"
+  ],
+  "pollutants": [
+    "C6H6 (Benzene)",
+    "CO (Monossido di carbonio)",
+    "NO (Monossido di azoto)",
+    "NO2 (Biossido di azoto)",
+    "NOX (Ossidi di azoto)",
+    "O3 (Ozono)",
+    "PM10",
+    "PM2.5"
+  ],
+  "station_comparison": {
+    "GIARDINI MARGHERITA": {
+      "NO2 (Biossido di azoto)": {
+        "mean": 21.1,
+        "max": 64.0,
+        "count": 1034
+      },
+      "O3 (Ozono)": {
+        "mean": 29.1,
+        "max": 96.0,
+        "count": 1054
+      }
+    },
+    "PORTA SAN FELICE": {
+      "NO2 (Biossido di azoto)": {
+        "mean": 31.4,
+        "max": 127.0,
+        "count": 1127
+      }
+    },
+    "VIA CHIARINI": {
+      "NO2 (Biossido di azoto)": {
+        "mean": 20.1,
+        "max": 59.0,
+        "count": 1076
+      },
+      "O3 (Ozono)": {
+        "mean": 29.4,
+        "max": 116.0,
+        "count": 1089
+      }
+    }
+  },
+  "monthly_trends": {
+    "NO2 (Biossido di azoto)": {
+      "2026-01": 29.2,
+      "2026-02": 24.7,
+      "2026-03": 20.3,
+      "2026-04": 17.0
+    },
+    "O3 (Ozono)": {
+      "2026-01": 17.3,
+      "2026-02": 27.8,
+      "2026-03": 36.5,
+      "2026-04": 56.0
+    }
+  },
+  "summary_stats": {
+    "GIARDINI MARGHERITA": {
+      "NO2 (Biossido di azoto)": {
+        "count": 1034,
+        "mean": 21.06,
+        "max": 64.0,
+        "min": 3.0
+      },
+      "O3 (Ozono)": {
+        "count": 1054,
+        "mean": 29.08,
+        "max": 96.0,
+        "min": 1.0
+      },
+      "PM10": {
+        "count": 43,
+        "mean": 24.3,
+        "max": 53.0,
+        "min": 0.0
+      },
+      "PM2.5": {
+        "count": 39,
+        "mean": 22.05,
+        "max": 52.0,
+        "min": 3.0
+      }
+    },
+    "PORTA SAN FELICE": {
+      "C6H6 (Benzene)": {
+        "count": 1030,
+        "mean": 1.24,
+        "max": 5.4,
+        "min": 0.2
+      },
+      "CO (Monossido di carbonio)": {
+        "count": 1137,
+        "mean": 0.62,
+        "max": 2.3,
+        "min": 0.1
+      },
+      "NO (Monossido di azoto)": {
+        "count": 1104,
+        "mean": 16.86,
+        "max": 470.0,
+        "min": 0.0
+      },
+      "NO2 (Biossido di azoto)": {
+        "count": 1127,
+        "mean": 31.38,
+        "max": 127.0,
+        "min": 0.0
+      },
+      "NOX (Ossidi di azoto)": {
+        "count": 1135,
+        "mean": 58.76,
+        "max": 848.0,
+        "min": 4.0
+      },
+      "PM10": {
+        "count": 38,
+        "mean": 33.89,
+        "max": 58.0,
+        "min": 4.0
+      },
+      "PM2.5": {
+        "count": 48,
+        "mean": 21.9,
+        "max": 51.0,
+        "min": 3.0
+      }
+    },
+    "VIA CHIARINI": {
+      "NO2 (Biossido di azoto)": {
+        "count": 1076,
+        "mean": 20.09,
+        "max": 59.0,
+        "min": 0.0
+      },
+      "O3 (Ozono)": {
+        "count": 1089,
+        "mean": 29.43,
+        "max": 116.0,
+        "min": 3.0
+      },
+      "PM10": {
+        "count": 46,
+        "mean": 20.76,
+        "max": 59.0,
+        "min": 0.0
+      }
+    }
+  }
+}

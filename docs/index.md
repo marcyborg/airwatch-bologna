@@ -1,44 +1,44 @@
-# AirWatch Bologna — Documentazione
+# AirWatch Bologna — Documentation
 
-Indice della documentazione del progetto AirWatch Bologna.
+Index of the AirWatch Bologna project documentation.
 
 ---
 
-## Note Tecniche
+## Technical Notes
 
-| File | Descrizione |
+| File | Description |
 |---|---|
-| [`notes/dettagli-tecnici-pipeline.md`](notes/dettagli-tecnici-pipeline.md) | Documentazione tecnica completa: fonte dati, schema, pipeline di elaborazione, statistiche, API reference, roadmap |
-| [`notes/prompt-ibrido-bologna.md`](notes/prompt-ibrido-bologna.md) | Prompt ibrido CoT+ReAct ottimizzato per il caso di studio Bologna — 10 step operativi con template di esecuzione |
-| [`notes/prompt-pipeline-ckan.md`](notes/prompt-pipeline-ckan.md) | Prompt generico per pipeline CKAN riutilizzabile su qualsiasi tema ambientale (aria, acqua, rifiuti, energia…) |
+| [`notes/pipeline-technical-details.md`](notes/pipeline-technical-details.md) | Full technical documentation: data source, schema, processing pipeline, statistics, API reference, roadmap |
+| [`notes/hybrid-prompt-bologna.md`](notes/hybrid-prompt-bologna.md) | Hybrid CoT+ReAct prompt optimized for the Bologna case study — 10 operational steps with execution template |
+| [`notes/ckan-pipeline-prompt.md`](notes/ckan-pipeline-prompt.md) | Generic reusable CKAN pipeline prompt for any environmental theme (air, water, waste, energy…) |
 
-## Riferimenti
+## References
 
-| File | Descrizione |
+| File | Description |
 |---|---|
-| [`links/references.md`](links/references.md) | Dataset, portali, normativa EU, strumenti e librerie usati nel progetto |
+| [`links/references.md`](links/references.md) | Datasets, portals, EU regulations, tools and libraries used in the project |
 
 ---
 
 ## Dataset
 
-- **Portale**: [dati.gov.it](https://dati.gov.it/opendata) — CKAN 2.10.3
+- **Portal**: [dati.gov.it](https://dati.gov.it/opendata) — CKAN 2.10.3
 - **Dataset ID**: `dffca3ba-806e-4477-99ef-83904d01e640`
-- **Titolo**: Centraline qualità dell'aria (misurazioni giornaliere)
-- **Publisher**: Comune di Bologna / ARPAE Emilia-Romagna
-- **Licenza**: CC BY 4.0
-- **Periodo analizzato**: 31 dic 2025 → 5 apr 2026
+- **Title**: Air quality monitoring stations (daily measurements)
+- **Publisher**: Municipality of Bologna / ARPAE Emilia-Romagna
+- **License**: CC BY 4.0
+- **Period analyzed**: Dec 31 2025 → Apr 5 2026
 
-## Struttura Dati
+## Data Structure
 
-Ogni record nel dataset corrisponde a una **misurazione oraria** di un singolo inquinante su una stazione:
+Each record in the dataset corresponds to a **hourly measurement** of a single pollutant at one station:
 
 ```
-[timestamp UTC] × [stazione] × [inquinante] × [valore µg/m³]
+[UTC timestamp] × [station] × [pollutant] × [value µg/m³]
 ```
 
-Campi: `_id` · `reftime` · `stazione` · `value` · `agente_atm`
+Fields: `_id` · `reftime` · `stazione` · `value` · `agente_atm`
 
 ---
 
-Torna al [README principale](../README.md).
+Back to [main README](../README.md).

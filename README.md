@@ -1,65 +1,65 @@
 # AirWatch Bologna
 
-**Pipeline analitica end-to-end per la qualità dell'aria urbana di Bologna**
+**End-to-end analytical pipeline for urban air quality monitoring in Bologna, Italy**
 
-Progetto sviluppato nell'ambito dello **Short Master in Generative AI** — Università degli Studi di Bari Aldo Moro, a.a. 2025/2026.
+Project developed as part of the **Short Master in Generative AI** — University of Bari Aldo Moro, a.y. 2025/2026.
 
-AirWatch Bologna dimostra come un agente AI possa costruire una pipeline dati completa — dal discovery di un portale CKAN open data fino a una dashboard HTML interattiva — usando il **CKAN MCP Server** come interfaccia programmatica per l'accesso ai dati aperti istituzionali.
+AirWatch Bologna demonstrates how an AI agent can build a complete data pipeline — from discovering a CKAN open data portal to producing an interactive HTML dashboard — using the **CKAN MCP Server** as a programmatic interface for accessing institutional open data.
 
 ---
 
-## Caso di Studio
+## Case Study
 
-| Campo | Valore |
+| Field | Value |
 |---|---|
-| **Dataset** | [Centraline qualità dell'aria (misurazioni giornaliere)](https://www.dati.gov.it/view-dataset/dataset?id=dffca3ba-806e-4477-99ef-83904d01e640) |
-| **Publisher** | Comune di Bologna |
-| **Fonte dati** | ARPAE Emilia-Romagna |
-| **Portale CKAN** | [dati.gov.it](https://dati.gov.it/opendata) |
-| **Licenza** | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
-| **Periodo analizzato** | 31 dic 2025 → 5 apr 2026 (97 giorni) |
-| **Record elaborati** | 10.000 misurazioni orarie |
+| **Dataset** | [Air quality monitoring stations (daily measurements)](https://www.dati.gov.it/view-dataset/dataset?id=dffca3ba-806e-4477-99ef-83904d01e640) |
+| **Publisher** | Municipality of Bologna |
+| **Data source** | ARPAE Emilia-Romagna |
+| **CKAN portal** | [dati.gov.it](https://dati.gov.it/opendata) |
+| **License** | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| **Period analyzed** | Dec 31 2025 → Apr 5 2026 (97 days) |
+| **Records processed** | 10,000 hourly measurements |
 
-**3 centraline monitorate**: Giardini Margherita · Porta San Felice · Via Chiarini  
-**8 inquinanti**: NO₂ · O₃ · PM10 · PM2.5 · NOX · NO · CO · C₆H₆
+**3 monitoring stations**: Giardini Margherita · Porta San Felice · Via Chiarini  
+**8 pollutants**: NO₂ · O₃ · PM10 · PM2.5 · NOX · NO · CO · C₆H₆
 
 ---
 
-## Struttura del Progetto
+## Project Structure
 
 ```
 airwatch-bologna/
-├── airwatch-bologna.html          # Dashboard HTML interattiva (aprire nel browser)
+├── airwatch-bologna.html          # Interactive HTML dashboard (open in browser)
 ├── data/
-│   └── stats.json                 # Statistiche calcolate (JSON)
+│   └── stats.json                 # Computed statistics (JSON)
 ├── docs/
-│   ├── index.md                   # Indice della documentazione
+│   ├── index.md                   # Documentation index
 │   ├── notes/
-│   │   ├── dettagli-tecnici-pipeline.md   # Documentazione tecnica completa
-│   │   ├── prompt-ibrido-bologna.md       # Prompt ibrido CoT+ReAct (caso Bologna)
-│   │   └── prompt-pipeline-ckan.md        # Prompt generico pipeline CKAN
+│   │   ├── pipeline-technical-details.md  # Full technical documentation
+│   │   ├── hybrid-prompt-bologna.md       # Hybrid CoT+ReAct prompt (Bologna case study)
+│   │   └── ckan-pipeline-prompt.md        # Generic reusable CKAN pipeline prompt
 │   └── links/
-│       └── references.md          # Riferimenti e risorse esterne
+│       └── references.md          # References and external resources
 ├── scripts/
-│   └── link-generator.js          # Script per generare indice dei link
+│   └── link-generator.js          # Script to generate documentation link index
 └── package.json
 ```
 
 ---
 
-## Avvio Rapido
+## Quick Start
 
-### Visualizzare la Dashboard
+### View the Dashboard
 
-Apri `airwatch-bologna.html` direttamente nel browser — nessun server richiesto.
+Open `airwatch-bologna.html` directly in your browser — no server required.
 
-La dashboard include:
-- KPI ambientali chiave (media NO₂, picchi PM10, giorni di superamento soglia)
-- Trend mensile NO₂ e O₃ (gennaio–aprile 2026)
-- Confronto tra le 3 centraline
-- Tabella statistica completa per inquinante
+The dashboard includes:
+- Key environmental KPIs (average NO₂, PM10 peaks, days exceeding threshold)
+- Monthly trend for NO₂ and O₃ (January–April 2026)
+- Comparison across the 3 monitoring stations
+- Full statistical table by pollutant
 
-### Generare l'indice dei link
+### Generate the link index
 
 ```bash
 npm install
@@ -68,61 +68,61 @@ npm run link
 
 ---
 
-## Architettura della Pipeline
+## Pipeline Architecture
 
-La pipeline segue 10 step operativi implementati tramite **CKAN MCP Server**:
+The pipeline follows 10 operational steps implemented via **CKAN MCP Server**:
 
 ```
-[API dati.gov.it] → Discovery portale → Verifica stato → Esplorazione catalogo
-→ Ricerca dataset → Ispezione metadati → Schema dati → Qualità dato
-→ Analisi KPI → Dashboard HTML → Documento Finale
+[API dati.gov.it] → Portal discovery → Status check → Catalog exploration
+→ Dataset search → Metadata inspection → Data schema → Data quality
+→ KPI analysis → HTML dashboard → Final documentation
 ```
 
-**Tecnica di prompting**: approccio ibrido **CoT** (Chain-of-Thought) + **ReAct** (Reason+Act) + **Structured Decomposition** con self-check finale.
+**Prompting technique**: hybrid **CoT** (Chain-of-Thought) + **ReAct** (Reason+Act) + **Structured Decomposition** with final self-check.
 
-Vedi [`docs/notes/prompt-ibrido-bologna.md`](docs/notes/prompt-ibrido-bologna.md) per il prompt completo e [`docs/notes/dettagli-tecnici-pipeline.md`](docs/notes/dettagli-tecnici-pipeline.md) per la documentazione tecnica.
+See [`docs/notes/hybrid-prompt-bologna.md`](docs/notes/hybrid-prompt-bologna.md) for the complete prompt and [`docs/notes/pipeline-technical-details.md`](docs/notes/pipeline-technical-details.md) for the technical documentation.
 
 ---
 
-## Risultati Principali
+## Key Results
 
-| Inquinante | Stazione | Media (µg/m³) | Massimo | Soglia EU |
+| Pollutant | Station | Avg (µg/m³) | Max | EU Limit |
 |---|---|---|---|---|
-| NO₂ | Porta San Felice | **31.4** | 127.0 | 40 µg/m³/anno |
-| NO₂ | Giardini Margherita | 21.1 | 64.0 | 40 µg/m³/anno |
-| NO₂ | Via Chiarini | 20.1 | 59.0 | 40 µg/m³/anno |
-| PM10 | Porta San Felice | **33.9** | 58.0 | 50 µg/m³/giorno |
-| PM10 | Giardini Margherita | 24.3 | 53.0 | 50 µg/m³/giorno |
-| PM10 | Via Chiarini | 20.8 | 59.0 | 50 µg/m³/giorno |
+| NO₂ | Porta San Felice | **31.4** | 127.0 | 40 µg/m³/year |
+| NO₂ | Giardini Margherita | 21.1 | 64.0 | 40 µg/m³/year |
+| NO₂ | Via Chiarini | 20.1 | 59.0 | 40 µg/m³/year |
+| PM10 | Porta San Felice | **33.9** | 58.0 | 50 µg/m³/day |
+| PM10 | Giardini Margherita | 24.3 | 53.0 | 50 µg/m³/day |
+| PM10 | Via Chiarini | 20.8 | 59.0 | 50 µg/m³/day |
 
-**Trend stagionale**: NO₂ in calo da gennaio (29.2) ad aprile (17.0 µg/m³). O₃ in forte crescita da gennaio (17.3) ad aprile (56.0 µg/m³) con l'aumento dell'irradiazione solare.
+**Seasonal trend**: NO₂ declining from January (29.2) to April (17.0 µg/m³). O₃ rising sharply from January (17.3) to April (56.0 µg/m³) with increasing solar radiation.
 
 ---
 
-## Stack Tecnologico
+## Tech Stack
 
-| Layer | Tecnologia |
+| Layer | Technology |
 |---|---|
-| Discovery & Metadati | [CKAN MCP Server](https://github.com/ondata/ckan-mcp-server) |
-| Acquisizione dati | Python `requests` / `pandas` |
-| Analisi statistica | Python `pandas` 2.x |
+| Discovery & Metadata | [CKAN MCP Server](https://github.com/marcyborg/ckan-mcp-server) |
+| Data acquisition | Python `requests` / `pandas` |
+| Statistical analysis | Python `pandas` 2.x |
 | Dashboard | HTML5 + [Chart.js](https://www.chartjs.org/) 4.4.0 via CDN |
-| Font | [DM Sans + DM Mono](https://fonts.google.com/) via Google Fonts |
-| Presentazione | pptxgenjs |
+| Fonts | [DM Sans + DM Mono](https://fonts.google.com/) via Google Fonts |
+| Presentation | pptxgenjs |
 
 ---
 
-## Licenza
+## License
 
-Il **codice** è rilasciato sotto licenza MIT.
+**Code** is released under the MIT License.
 
-I **dati** sono rilasciati sotto [Creative Commons Attribuzione 4.0 Internazionale (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) — Comune di Bologna / ARPAE Emilia-Romagna.
+**Data** is released under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) — Municipality of Bologna / ARPAE Emilia-Romagna.
 
-> Dati: Comune di Bologna — elaborazione ARPAE Emilia-Romagna. Fonte: [dati.gov.it](https://dati.gov.it). Licenza CC BY 4.0.
+> Data: Municipality of Bologna — processed by ARPAE Emilia-Romagna. Source: [dati.gov.it](https://dati.gov.it). License CC BY 4.0.
 
 ---
 
-## Autore
+## Author
 
-**Ing. Francesco Marchitelli** — [https://www.francescomarchitelli.com](https://www.francescomarchitelli.com)  
-Short Master Generative AI — Università degli Studi di Bari Aldo Moro — a.a. 2025/2026
+**Francesco Marchitelli** — [marchitelli.francesco@gmail.com](mailto:marchitelli.francesco@gmail.com)  
+Short Master in Generative AI — University of Bari Aldo Moro — a.y. 2025/2026

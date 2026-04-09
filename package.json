@@ -1,7 +1,7 @@
 {
   "name": "airwatch-bologna",
   "version": "1.1.0",
-  "description": "Pipeline analitica end-to-end per la qualità dell'aria urbana di Bologna — CKAN MCP Server + Python + Chart.js",
+  "description": "End-to-end analytical pipeline for urban air quality monitoring in Bologna — CKAN MCP Server + Python + Chart.js",
   "main": "scripts/link-generator.js",
   "scripts": {
     "link": "node scripts/link-generator.js"
@@ -13,11 +13,11 @@
   "keywords": [
     "open-data",
     "ckan",
-    "qualita-aria",
+    "air-quality",
     "bologna",
     "arpae",
     "pipeline",
-    "analisi-dati",
+    "data-analysis",
     "dashboard",
     "mcp-server",
     "generative-ai",

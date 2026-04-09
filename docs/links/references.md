@@ -1,37 +1,37 @@
-# Riferimenti — AirWatch Bologna
+# References — AirWatch Bologna
 
-Risorse esterne, dataset, normativa e strumenti usati nel progetto.
+External resources, datasets, regulations, and tools used in the project.
 
 ---
 
-## Dati e Portali Open Data
+## Data & Open Data Portals
 
-- [Centraline qualità dell'aria (misurazioni giornaliere) — dati.gov.it](https://www.dati.gov.it/view-dataset/dataset?id=dffca3ba-806e-4477-99ef-83904d01e640) — Dataset principale, ID: `dffca3ba-806e-4477-99ef-83904d01e640`
-- [Open Data Bologna — Centraline qualità dell'aria](https://opendata.comune.bologna.it/explore/dataset/centraline-qualita-aria) — Endpoint CSV e metadati OpenDataSoft
-- [dati.gov.it — Catalogo Nazionale Open Data](https://dati.gov.it/opendata) — Portale CKAN 2.10.3, 69.000+ dataset
-- [ARPAE Emilia-Romagna — Qualità dell'Aria](https://dati.arpae.it/dataset/qualita-dell-aria-rete-di-monitoraggio) — Fonte primaria delle misurazioni
-- [Centraline qualità dell'aria (storico dal 2017)](https://www.dati.gov.it/view-dataset/dataset?id=7657be0f-bb45-468e-8ea8-cc84e0cee0e4) — Dataset storico per analisi longitudinali
+- [Air quality monitoring stations (daily measurements) — dati.gov.it](https://www.dati.gov.it/view-dataset/dataset?id=dffca3ba-806e-4477-99ef-83904d01e640) — Main dataset, ID: `dffca3ba-806e-4477-99ef-83904d01e640`
+- [Open Data Bologna — Air quality monitoring stations](https://opendata.comune.bologna.it/explore/dataset/centraline-qualita-aria) — CSV endpoint and OpenDataSoft metadata
+- [dati.gov.it — National Open Data Catalog](https://dati.gov.it/opendata) — CKAN 2.10.3 portal, 69,000+ datasets
+- [ARPAE Emilia-Romagna — Air Quality](https://dati.arpae.it/dataset/qualita-dell-aria-rete-di-monitoraggio) — Primary source of measurements
+- [Air quality monitoring stations (historical from 2017)](https://www.dati.gov.it/view-dataset/dataset?id=7657be0f-bb45-468e-8ea8-cc84e0cee0e4) — Historical dataset for longitudinal analysis
 
-## Normativa Europea
+## European Regulations
 
-- [Direttiva 2008/50/CE — Qualità dell'aria ambiente](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32008L0050) — Limiti PM10, NO₂, O₃, benzene
-- [WHO Air Quality Guidelines 2021](https://www.who.int/publications/i/item/9789240034228) — Linee guida OMS per la qualità dell'aria
+- [Directive 2008/50/EC — Ambient Air Quality](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008L0050) — PM10, NO₂, O₃, benzene limit values
+- [WHO Air Quality Guidelines 2021](https://www.who.int/publications/i/item/9789240034228) — WHO global air quality guidelines
 
-## Strumenti e Librerie
+## Tools & Libraries
 
-- [CKAN MCP Server](https://github.com/marcyborg/ckan-mcp-server) — Server MCP per l'interrogazione di portali CKAN open data
-- [CKAN API Documentation](https://docs.ckan.org/en/2.10/api/) — Riferimento API CKAN 2.10.x
-- [Chart.js 4.4.0](https://www.chartjs.org/) — Libreria JavaScript per grafici interattivi
-- [pandas Documentation](https://pandas.pydata.org/docs/) — Libreria Python per analisi dati
-- [pptxgenjs](https://gitbrent.github.io/PptxGenJS/) — Libreria Node.js per generazione PPTX
+- [CKAN MCP Server](https://github.com/marcyborg/ckan-mcp-server) — MCP server for querying CKAN open data portals
+- [CKAN API Documentation](https://docs.ckan.org/en/2.10/api/) — CKAN 2.10.x API reference
+- [Chart.js 4.4.0](https://www.chartjs.org/) — JavaScript library for interactive charts
+- [pandas Documentation](https://pandas.pydata.org/docs/) — Python data analysis library
+- [pptxgenjs](https://gitbrent.github.io/PptxGenJS/) — Node.js library for PPTX generation
 
-## Risorse di Riferimento per la Qualità dell'Aria
+## Air Quality Reference Resources
 
-- [European Environment Agency — Air Quality](https://www.eea.europa.eu/en/topics/in-depth/air-pollution) — Dati e rapporti qualità aria Europa
-- [IQAir — Bologna Air Quality](https://www.iqair.com/it/italy/emilia-romagna/bologna) — Indice qualità aria in tempo reale
-- [Copernicus Atmosphere Monitoring Service](https://atmosphere.copernicus.eu/) — Servizio europeo monitoraggio atmosfera
+- [European Environment Agency — Air Quality](https://www.eea.europa.eu/en/topics/in-depth/air-pollution) — European air quality data and reports
+- [IQAir — Bologna Air Quality](https://www.iqair.com/it/italy/emilia-romagna/bologna) — Real-time air quality index
+- [Copernicus Atmosphere Monitoring Service](https://atmosphere.copernicus.eu/) — European atmosphere monitoring service
 
-## Licenze
+## Licenses
 
-- [Creative Commons CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — Licenza dei dati open data utilizzati
-- [MIT License](https://opensource.org/licenses/MIT) — Licenza del codice del progetto
+- [Creative Commons CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — License for the open data used
+- [MIT License](https://opensource.org/licenses/MIT) — License for the project code

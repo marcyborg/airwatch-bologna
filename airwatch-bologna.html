@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="it" data-theme="dark">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AirWatch Bologna — Qualità dell'Aria</title>
+<title>AirWatch Bologna — Air Quality</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300..700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -185,12 +185,12 @@ a:hover{color:var(--color-primary-hover)}
     <nav class="nav-links">
       <a href="#kpi" class="active">KPI</a>
       <a href="#trend">Trend</a>
-      <a href="#stazioni">Stazioni</a>
-      <a href="#tabella">Dati</a>
+      <a href="#stazioni">Stations</a>
+      <a href="#tabella">Data</a>
     </nav>
     <div class="header-actions">
       <span class="badge-live">LIVE</span>
-      <button class="theme-btn" data-theme-toggle aria-label="Cambia tema">
+      <button class="theme-btn" data-theme-toggle aria-label="Toggle theme">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       </button>
     </div>
@@ -201,19 +201,19 @@ a:hover{color:var(--color-primary-hover)}
 <main>
 <section class="hero">
   <div class="container">
-    <p class="hero-eyebrow">Caso di Studio — dati.gov.it × Open Data Bologna</p>
-    <h1>Qualità dell'Aria<br>a Bologna</h1>
-    <p class="hero-sub">Pipeline automatica su dati ARPAE Emilia-Romagna pubblicati dal Comune di Bologna su <strong>dati.gov.it</strong>. Tre centraline urbane monitorate in continuo: Via Chiarini, Giardini Margherita, Porta San Felice.</p>
+    <p class="hero-eyebrow">Case Study — dati.gov.it × Open Data Bologna</p>
+    <h1>Air Quality<br>in Bologna</h1>
+    <p class="hero-sub">Automated pipeline on ARPAE Emilia-Romagna data published by the Municipality of Bologna on <strong>dati.gov.it</strong>. Three urban monitoring stations tracked continuously: Via Chiarini, Giardini Margherita, Porta San Felice.</p>
     <div class="hero-meta">
-      <div class="meta-item">📅 Copertura: <strong>31 dic 2025 → 31 mar 2026</strong></div>
+      <div class="meta-item">📅 Coverage: <strong>31 Dec 2025 → 31 Mar 2026</strong></div>
       <span class="meta-sep">·</span>
-      <div class="meta-item">🗃️ Fonte: <strong>dati.gov.it</strong></div>
+      <div class="meta-item">🗃️ Source: <strong>dati.gov.it</strong></div>
       <span class="meta-sep">·</span>
-      <div class="meta-item">⚖️ Licenza: <strong>CC BY 4.0</strong></div>
+      <div class="meta-item">⚖️ License: <strong>CC BY 4.0</strong></div>
       <span class="meta-sep">·</span>
-      <div class="meta-item">🔄 Aggiornamento: <strong>Giornaliero</strong></div>
+      <div class="meta-item">🔄 Update: <strong>Daily</strong></div>
       <span class="meta-sep">·</span>
-      <div class="meta-item">📦 Righe scaricate: <strong>19.661</strong></div>
+      <div class="meta-item">📦 Rows downloaded: <strong>19,661</strong></div>
     </div>
   </div>
 </section>
@@ -223,49 +223,49 @@ a:hover{color:var(--color-primary-hover)}
   <div class="container">
     <h2 class="section-title">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-      Indicatori Chiave
+      Key Indicators
     </h2>
-    <p class="section-sub">Media giornaliera di tutti gli inquinanti su 91 giorni. Limite EU PM10: 50 µg/m³/giorno. Limite EU NO₂: 40 µg/m³/anno.</p>
+    <p class="section-sub">Daily average for all pollutants over 91 days. EU PM10 limit: 50 µg/m³/day. EU NO₂ limit: 40 µg/m³/year.</p>
     <div class="grid-4">
       <div class="kpi-card accent-warn">
-        <div class="kpi-label">PM10 medio</div>
+        <div class="kpi-label">Average PM10</div>
         <div class="kpi-value">28.3<span class="kpi-unit">µg/m³</span></div>
-        <span class="kpi-delta delta-ok">✓ Sotto soglia EU 50</span>
+        <span class="kpi-delta delta-ok">✓ Below EU limit 50</span>
       </div>
       <div class="kpi-card accent-err">
-        <div class="kpi-label">PM10 massimo</div>
+        <div class="kpi-label">Maximum PM10</div>
         <div class="kpi-value">73.0<span class="kpi-unit">µg/m³</span></div>
-        <span class="kpi-delta delta-warn">⚠ Supera limite 50</span>
+        <span class="kpi-delta delta-warn">⚠ Exceeds limit 50</span>
       </div>
       <div class="kpi-card">
-        <div class="kpi-label">NO₂ medio</div>
+        <div class="kpi-label">Average NO₂</div>
         <div class="kpi-value">24.7<span class="kpi-unit">µg/m³</span></div>
-        <span class="kpi-delta delta-ok">✓ Sotto soglia EU 40</span>
+        <span class="kpi-delta delta-ok">✓ Below EU limit 40</span>
       </div>
       <div class="kpi-card accent-primary">
-        <div class="kpi-label">O₃ medio</div>
+        <div class="kpi-label">Average O₃</div>
         <div class="kpi-value">27.2<span class="kpi-unit">µg/m³</span></div>
-        <span class="kpi-delta delta-neutral">→ Monitoraggio</span>
+        <span class="kpi-delta delta-neutral">→ Monitoring</span>
       </div>
       <div class="kpi-card">
-        <div class="kpi-label">PM2.5 medio</div>
+        <div class="kpi-label">Average PM2.5</div>
         <div class="kpi-value">20.7<span class="kpi-unit">µg/m³</span></div>
-        <span class="kpi-delta delta-ok">✓ Entro limiti</span>
+        <span class="kpi-delta delta-ok">✓ Within limits</span>
       </div>
       <div class="kpi-card accent-err">
-        <div class="kpi-label">Superamenti PM10<br><small style="font-weight:400;text-transform:none;letter-spacing:0">Porta San Felice</small></div>
-        <div class="kpi-value" style="color:var(--color-error)">16<span class="kpi-unit">giorni</span></div>
-        <span class="kpi-delta delta-warn">⚠ Criticità alta</span>
+        <div class="kpi-label">PM10 Exceedances<br><small style="font-weight:400;text-transform:none;letter-spacing:0">Porta San Felice</small></div>
+        <div class="kpi-value" style="color:var(--color-error)">16<span class="kpi-unit">days</span></div>
+        <span class="kpi-delta delta-warn">⚠ High criticality</span>
       </div>
       <div class="kpi-card">
-        <div class="kpi-label">Giorni analizzati</div>
-        <div class="kpi-value">91<span class="kpi-unit">giorni</span></div>
-        <span class="kpi-delta delta-neutral">→ dic 2025 – mar 2026</span>
+        <div class="kpi-label">Days analyzed</div>
+        <div class="kpi-value">91<span class="kpi-unit">days</span></div>
+        <span class="kpi-delta delta-neutral">→ Dec 2025 – Mar 2026</span>
       </div>
       <div class="kpi-card">
-        <div class="kpi-label">Completezza dataset</div>
+        <div class="kpi-label">Dataset completeness</div>
         <div class="kpi-value">58<span class="kpi-unit">%</span></div>
-        <span class="kpi-delta delta-warn">⚠ Gap di misurazioni</span>
+        <span class="kpi-delta delta-warn">⚠ Measurement gaps</span>
       </div>
     </div>
   </div>
@@ -276,23 +276,23 @@ a:hover{color:var(--color-primary-hover)}
   <div class="container">
     <h2 class="section-title">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-      Trend Mensile degli Inquinanti
+      Monthly Pollutant Trend
     </h2>
-    <p class="section-sub">Concentrazioni medie mensili per i principali inquinanti. Dati: gen 2026 → mar 2026 (dati dicembre parziali).</p>
+    <p class="section-sub">Monthly average concentrations for the main pollutants. Data: Jan 2026 → Mar 2026 (December data partial).</p>
     <div class="grid-2">
       <div class="chart-card">
         <div class="chart-card-header">
-          <div><div class="chart-card-title">PM10 & PM2.5</div><div class="chart-card-sub">Particolato atmosferico — µg/m³</div></div>
+          <div><div class="chart-card-title">PM10 & PM2.5</div><div class="chart-card-sub">Atmospheric particulate matter — µg/m³</div></div>
         </div>
         <div class="chart-wrap"><canvas id="chartPM"></canvas></div>
-        <div class="threshold-note"><span class="threshold-line"></span> Limite EU PM10: 50 µg/m³</div>
+        <div class="threshold-note"><span class="threshold-line"></span> EU PM10 limit: 50 µg/m³</div>
       </div>
       <div class="chart-card">
         <div class="chart-card-header">
-          <div><div class="chart-card-title">NO₂ & O₃</div><div class="chart-card-sub">Ossidi di azoto e ozono — µg/m³</div></div>
+          <div><div class="chart-card-title">NO₂ & O₃</div><div class="chart-card-sub">Nitrogen oxides and ozone — µg/m³</div></div>
         </div>
         <div class="chart-wrap"><canvas id="chartNO2O3"></canvas></div>
-        <div class="threshold-note"><span class="threshold-line"></span> Limite EU NO₂: 40 µg/m³/anno</div>
+        <div class="threshold-note"><span class="threshold-line"></span> EU NO₂ limit: 40 µg/m³/year</div>
       </div>
     </div>
   </div>
@@ -303,12 +303,12 @@ a:hover{color:var(--color-primary-hover)}
   <div class="container">
     <h2 class="section-title">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-      PM10 Giornaliero per Centralina
+      Daily PM10 by Station
     </h2>
-    <p class="section-sub">Ultime 60 letture giornaliere per stazione. La linea rossa tratteggiata indica il limite EU (50 µg/m³).</p>
+    <p class="section-sub">Last 60 daily readings per station. The dashed red line indicates the EU limit (50 µg/m³).</p>
 
     <div class="tab-group">
-      <button class="tab-btn active" onclick="showTab('pm10tab','all')">Tutte le stazioni</button>
+      <button class="tab-btn active" onclick="showTab('pm10tab','all')">All stations</button>
       <button class="tab-btn" onclick="showTab('pm10tab','psf')">Porta San Felice</button>
       <button class="tab-btn" onclick="showTab('pm10tab','gm')">Giardini Margherita</button>
       <button class="tab-btn" onclick="showTab('pm10tab','vc')">Via Chiarini</button>
@@ -331,9 +331,9 @@ a:hover{color:var(--color-primary-hover)}
   <div class="container">
     <h2 class="section-title">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="13" width="4" height="8" rx="1"/><rect x="10" y="8" width="4" height="13" rx="1"/><rect x="17" y="4" width="4" height="17" rx="1"/></svg>
-      Confronto per Centralina
+      Comparison by Station
     </h2>
-    <p class="section-sub">Media di ciascun inquinante disaggregata per stazione. Evidenzia differenze geografiche nell'esposizione all'inquinamento.</p>
+    <p class="section-sub">Average of each pollutant broken down by station. Highlights geographic differences in pollution exposure.</p>
     <div class="chart-card">
       <div class="chart-wrap"><canvas id="chartBar"></canvas></div>
     </div>
@@ -345,30 +345,30 @@ a:hover{color:var(--color-primary-hover)}
   <div class="container">
     <h2 class="section-title">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-      Riepilogo Statistico
+      Statistical Summary
     </h2>
-    <p class="section-sub">Statistiche descrittive per inquinante sull'intero periodo. Valori in µg/m³. Valori anomali evidenziati.</p>
+    <p class="section-sub">Descriptive statistics by pollutant over the entire period. Values in µg/m³. Anomalous values highlighted.</p>
     <div class="chart-card" style="padding:0;overflow:hidden">
       <table class="data-table">
         <thead>
           <tr>
-            <th>Inquinante</th>
-            <th>Media</th>
-            <th>Massimo</th>
-            <th>Minimo</th>
-            <th>Dev. Std</th>
-            <th>Valutazione</th>
+            <th>Pollutant</th>
+            <th>Mean</th>
+            <th>Maximum</th>
+            <th>Minimum</th>
+            <th>Std. Dev.</th>
+            <th>Assessment</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>PM10</strong></td><td class="val-ok">28.3</td><td class="val-danger">73.0</td><td>0.0</td><td>14.6</td><td><span class="kpi-delta delta-warn">⚠ Picchi critici</span></td></tr>
-          <tr><td><strong>PM2.5</strong></td><td class="val-ok">20.7</td><td class="val-warn">54.0</td><td>0.0</td><td>11.9</td><td><span class="kpi-delta delta-ok">✓ Media ok</span></td></tr>
-          <tr><td><strong>NO₂</strong></td><td class="val-ok">24.7</td><td class="val-warn">56.8</td><td>5.6</td><td>8.7</td><td><span class="kpi-delta delta-ok">✓ Sotto soglia</span></td></tr>
-          <tr><td><strong>NOX</strong></td><td class="val-warn">58.1</td><td class="val-danger">149.6</td><td>16.8</td><td>27.3</td><td><span class="kpi-delta delta-warn">⚠ Attenzione</span></td></tr>
-          <tr><td><strong>O₃</strong></td><td class="val-ok">27.2</td><td>83.9</td><td>3.6</td><td>14.8</td><td><span class="kpi-delta delta-neutral">→ Monitorare</span></td></tr>
-          <tr><td><strong>NO</strong></td><td>17.2</td><td class="val-warn">68.0</td><td>2.9</td><td>13.3</td><td><span class="kpi-delta delta-neutral">→ Monitorare</span></td></tr>
-          <tr><td><strong>CO</strong></td><td class="val-ok">0.63</td><td>1.18</td><td>0.31</td><td>0.20</td><td><span class="kpi-delta delta-ok">✓ Entro limiti</span></td></tr>
-          <tr><td><strong>C₆H₆ Benzene</strong></td><td class="val-ok">1.29</td><td>2.48</td><td>0.48</td><td>0.40</td><td><span class="kpi-delta delta-ok">✓ Sotto soglia EU (5)</span></td></tr>
+          <tr><td><strong>PM10</strong></td><td class="val-ok">28.3</td><td class="val-danger">73.0</td><td>0.0</td><td>14.6</td><td><span class="kpi-delta delta-warn">⚠ Critical peaks</span></td></tr>
+          <tr><td><strong>PM2.5</strong></td><td class="val-ok">20.7</td><td class="val-warn">54.0</td><td>0.0</td><td>11.9</td><td><span class="kpi-delta delta-ok">✓ Mean ok</span></td></tr>
+          <tr><td><strong>NO₂</strong></td><td class="val-ok">24.7</td><td class="val-warn">56.8</td><td>5.6</td><td>8.7</td><td><span class="kpi-delta delta-ok">✓ Below limit</span></td></tr>
+          <tr><td><strong>NOX</strong></td><td class="val-warn">58.1</td><td class="val-danger">149.6</td><td>16.8</td><td>27.3</td><td><span class="kpi-delta delta-warn">⚠ Attention</span></td></tr>
+          <tr><td><strong>O₃</strong></td><td class="val-ok">27.2</td><td>83.9</td><td>3.6</td><td>14.8</td><td><span class="kpi-delta delta-neutral">→ Monitor</span></td></tr>
+          <tr><td><strong>NO</strong></td><td>17.2</td><td class="val-warn">68.0</td><td>2.9</td><td>13.3</td><td><span class="kpi-delta delta-neutral">→ Monitor</span></td></tr>
+          <tr><td><strong>CO</strong></td><td class="val-ok">0.63</td><td>1.18</td><td>0.31</td><td>0.20</td><td><span class="kpi-delta delta-ok">✓ Within limits</span></td></tr>
+          <tr><td><strong>C₆H₆ Benzene</strong></td><td class="val-ok">1.29</td><td>2.48</td><td>0.48</td><td>0.40</td><td><span class="kpi-delta delta-ok">✓ Below EU limit (5)</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -381,12 +381,12 @@ a:hover{color:var(--color-primary-hover)}
     <div class="footer-inner">
       <div>
         <div class="footer-logo">AirWatch Bologna</div>
-        <p style="margin-top:var(--space-1)">Caso di Studio — Pipeline Open Data su dati.gov.it</p>
+        <p style="margin-top:var(--space-1)">Case Study — Open Data Pipeline on dati.gov.it</p>
       </div>
       <div>
-        <p>Dati: <a href="https://www.dati.gov.it/view-dataset/dataset?id=dffca3ba-806e-4477-99ef-83904d01e640" target="_blank" rel="noopener">Comune di Bologna via dati.gov.it</a></p>
-        <p>Sorgente ARPAE: <a href="https://dati.arpae.it/dataset/qualita-dell-aria-rete-di-monitoraggio" target="_blank" rel="noopener">dati.arpae.it</a></p>
-        <p>Licenza: <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener">CC BY 4.0</a></p>
+        <p>Data: <a href="https://www.dati.gov.it/view-dataset/dataset?id=dffca3ba-806e-4477-99ef-83904d01e640" target="_blank" rel="noopener">Municipality of Bologna via dati.gov.it</a></p>
+        <p>ARPAE source: <a href="https://dati.arpae.it/dataset/qualita-dell-aria-rete-di-monitoraggio" target="_blank" rel="noopener">dati.arpae.it</a></p>
+        <p>License: <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" rel="noopener">CC BY 4.0</a></p>
       </div>
     </div>
   </div>
@@ -410,7 +410,7 @@ function showTab(group, id) {
 }
 
 // ===== DATA =====
-const MONTHS = ['Dic 2025','Gen 2026','Feb 2026','Mar 2026'];
+const MONTHS = ['Dec 2025','Jan 2026','Feb 2026','Mar 2026'];
 const PM10_M = [36.3, 32.9, 25.2, 26.3];
 const PM25_M = [28.5, 25.9, 17.4, 18.4];
 const NO2_M  = [19.7, 29.9, 24.6, 19.7];
@@ -454,7 +454,7 @@ function buildCharts(){
     data:{labels:MONTHS,datasets:[
       {label:'PM10',data:PM10_M,borderColor:'#e05c3a',backgroundColor:'rgba(224,92,58,0.1)',tension:0.4,fill:true,pointRadius:5,borderWidth:2},
       {label:'PM2.5',data:PM25_M,borderColor:'#da7101',backgroundColor:'rgba(218,113,1,0.08)',tension:0.4,fill:true,pointRadius:5,borderWidth:2},
-      {label:'Soglia EU PM10',data:[50,50,50,50],borderColor:'rgba(192,57,43,0.6)',borderDash:[6,4],borderWidth:1.5,pointRadius:0,fill:false}
+      {label:'EU PM10 Limit',data:[50,50,50,50],borderColor:'rgba(192,57,43,0.6)',borderDash:[6,4],borderWidth:1.5,pointRadius:0,fill:false}
     ]},
     options:{...baseOpts}
   });
@@ -465,7 +465,7 @@ function buildCharts(){
     data:{labels:MONTHS,datasets:[
       {label:'NO₂',data:NO2_M,borderColor:'#5591c7',backgroundColor:'rgba(85,145,199,0.1)',tension:0.4,fill:true,pointRadius:5,borderWidth:2},
       {label:'O₃',data:O3_M,borderColor:'#437a22',backgroundColor:'rgba(67,122,34,0.08)',tension:0.4,fill:true,pointRadius:5,borderWidth:2},
-      {label:'Soglia EU NO₂',data:[40,40,40,40],borderColor:'rgba(192,57,43,0.6)',borderDash:[6,4],borderWidth:1.5,pointRadius:0,fill:false}
+      {label:'EU NO₂ Limit',data:[40,40,40,40],borderColor:'rgba(192,57,43,0.6)',borderDash:[6,4],borderWidth:1.5,pointRadius:0,fill:false}
     ]},
     options:{...baseOpts}
   });
@@ -477,7 +477,7 @@ function buildCharts(){
       {label:'Porta San Felice',data:PM10_PSF.values,borderColor:'#e05c3a',backgroundColor:'rgba(224,92,58,0.06)',tension:0.2,fill:true,pointRadius:2,borderWidth:1.5},
       {label:'Giardini Margherita',data:PM10_GM.values,borderColor:'#01696f',backgroundColor:'rgba(1,105,111,0.06)',tension:0.2,fill:true,pointRadius:2,borderWidth:1.5},
       {label:'Via Chiarini',data:PM10_VC.values,borderColor:'#5591c7',backgroundColor:'rgba(85,145,199,0.06)',tension:0.2,fill:true,pointRadius:2,borderWidth:1.5},
-      {label:'Soglia EU 50',data:PM10_PSF.dates.map(()=>50),borderColor:'rgba(192,57,43,0.5)',borderDash:[6,4],borderWidth:1.5,pointRadius:0,fill:false}
+      {label:'EU Limit 50',data:PM10_PSF.dates.map(()=>50),borderColor:'rgba(192,57,43,0.5)',borderDash:[6,4],borderWidth:1.5,pointRadius:0,fill:false}
     ]},
     options:{...baseOpts,scales:{x:{ticks:{color:textColor,maxTicksLimit:10,font:{size:10}},grid:{color:gridColor}},y:{ticks:{color:textColor,font:{size:11}},grid:{color:gridColor}}}}
   });

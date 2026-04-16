@@ -4,7 +4,7 @@
 
 Project developed as part of the **Short Master in Generative AI** — University of Bari Aldo Moro, a.y. 2025/2026.
 
-AirWatch Bologna demonstrates how an AI agent can build a complete data pipeline — from discovering a CKAN open data portal to producing an interactive HTML dashboard — using the **CKAN MCP Server** as a programmatic interface for accessing institutional open data.
+AirWatch Bologna demonstrates how an AI agent can build a complete data pipeline — from discovering a CKAN open data portal to producing an interactive HTML dashboard — using the [*onData*](https://github.com/ondata) [**CKAN MCP Server**](https://github.com/ondata/ckan-mcp-server) as a programmatic interface for accessing institutional open data.
 
 ---
 
